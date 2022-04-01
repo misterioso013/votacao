@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Sistema de votação em Nextjs",
   "main": "index.js",
-  "repository": "https://github.com/misterioso013/votacao-nextjs",
+  "repository": "https://github.com/misterioso013/votacao",
   "author": "Rosiel Victor",
   "license": "MIT",
   "scripts": {

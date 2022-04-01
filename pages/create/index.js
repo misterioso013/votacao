@@ -2,7 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { parseCookies, setCookie } from "nookies";
-
+import styles from "../../styles/create.module.css";
+import Head from "next/head";
 export default function create({cookies}) {
 
     const [title, setTitle] = useState("");
@@ -63,9 +64,14 @@ export default function create({cookies}) {
 
     return(
         <div>
-            <h1>Create Poll</h1>
+            <Head>
+                <title>Criar Enquete - Vota ai</title>
+            </Head>
+            <h1 className={styles.title}>Criar Enquete</h1>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}
+            className={styles.form}
+            >
             
             <div>
                     <label htmlFor="user_name">Seu nome:</label>
@@ -105,7 +111,7 @@ export default function create({cookies}) {
                     />
                 </div>
                 <div>
-                    <button type="submit">Continuar</button>
+                    <button type="submit" className={styles.button}>Continuar</button>
                 </div>
 
             </form>
